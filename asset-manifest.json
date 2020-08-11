@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/.github.io/todomake/static/css/main.654cecd4.chunk.css",
+    "main.js": "/.github.io/todomake/static/js/main.3fff53ff.chunk.js",
+    "main.js.map": "/.github.io/todomake/static/js/main.3fff53ff.chunk.js.map",
+    "runtime-main.js": "/.github.io/todomake/static/js/runtime-main.379d8d3d.js",
+    "runtime-main.js.map": "/.github.io/todomake/static/js/runtime-main.379d8d3d.js.map",
+    "static/js/2.c881ae52.chunk.js": "/.github.io/todomake/static/js/2.c881ae52.chunk.js",
+    "static/js/2.c881ae52.chunk.js.map": "/.github.io/todomake/static/js/2.c881ae52.chunk.js.map",
+    "index.html": "/.github.io/todomake/index.html",
+    "precache-manifest.4c8b868e6ce8a97f047a67eba691a752.js": "/.github.io/todomake/precache-manifest.4c8b868e6ce8a97f047a67eba691a752.js",
+    "service-worker.js": "/.github.io/todomake/service-worker.js",
+    "static/css/main.654cecd4.chunk.css.map": "/.github.io/todomake/static/css/main.654cecd4.chunk.css.map",
+    "static/js/2.c881ae52.chunk.js.LICENSE.txt": "/.github.io/todomake/static/js/2.c881ae52.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.379d8d3d.js",
+    "static/js/2.c881ae52.chunk.js",
+    "static/css/main.654cecd4.chunk.css",
+    "static/js/main.3fff53ff.chunk.js"
+  ]
+}
