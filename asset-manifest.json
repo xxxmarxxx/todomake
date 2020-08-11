@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/todomake/static/css/main.654cecd4.chunk.css",
-    "main.js": "/todomake/static/js/main.3e17bf72.chunk.js",
-    "main.js.map": "/todomake/static/js/main.3e17bf72.chunk.js.map",
+    "main.css": "/todomake/static/css/main.19aa7aea.chunk.css",
+    "main.js": "/todomake/static/js/main.57b16dfb.chunk.js",
+    "main.js.map": "/todomake/static/js/main.57b16dfb.chunk.js.map",
     "runtime-main.js": "/todomake/static/js/runtime-main.255adc1e.js",
     "runtime-main.js.map": "/todomake/static/js/runtime-main.255adc1e.js.map",
     "static/js/2.593e37fe.chunk.js": "/todomake/static/js/2.593e37fe.chunk.js",
     "static/js/2.593e37fe.chunk.js.map": "/todomake/static/js/2.593e37fe.chunk.js.map",
     "index.html": "/todomake/index.html",
-    "precache-manifest.df348ff009d95b56a868a344a42118ea.js": "/todomake/precache-manifest.df348ff009d95b56a868a344a42118ea.js",
+    "precache-manifest.06404ebe64ef0f95294e9107b3fe61d3.js": "/todomake/precache-manifest.06404ebe64ef0f95294e9107b3fe61d3.js",
     "service-worker.js": "/todomake/service-worker.js",
-    "static/css/main.654cecd4.chunk.css.map": "/todomake/static/css/main.654cecd4.chunk.css.map",
+    "static/css/main.19aa7aea.chunk.css.map": "/todomake/static/css/main.19aa7aea.chunk.css.map",
     "static/js/2.593e37fe.chunk.js.LICENSE.txt": "/todomake/static/js/2.593e37fe.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.255adc1e.js",
     "static/js/2.593e37fe.chunk.js",
-    "static/css/main.654cecd4.chunk.css",
-    "static/js/main.3e17bf72.chunk.js"
+    "static/css/main.19aa7aea.chunk.css",
+    "static/js/main.57b16dfb.chunk.js"
   ]
 }
