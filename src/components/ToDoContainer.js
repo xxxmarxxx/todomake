@@ -2,8 +2,8 @@ import React from "react";
 import Header from "./Header";
 import TodoItem from "./TodoItem/TodoItem";
 import InputTodo from "./InputTodo";
-import { v4 as uuidv4 } from 'uuid';
-
+import { v4 as uuidv4 } from "uuid";
+import axios from "axios";
 
 // class component
 class TodoContainer extends React.Component {
@@ -11,40 +11,29 @@ class TodoContainer extends React.Component {
     super(props);
 
     this.state = {
-      id: "",
-      title: "",
-      completed: false,
-
-      todos: [
-        {
-          id: uuidv4(),
-          title: "react lernen",
-          completed: false,
-        },
-        {
-          id: uuidv4(),
-          title: "javaScript auffrischen(Klassen, usw.)",
-          completed: false,
-        },
-        {
-          id: uuidv4(),
-          title: "ajajajaj(Klassen, usw.)",
-          completed: false,
-        },
-        {
-          id: uuidv4(),
-          title: "Hallo world",
-          completed: false,
-        },
-        {
-          id: uuidv4(),
-          title: '"Hallo apollo 18"',
-          completed: false,
-        },
-      ],
+      todos: [],
     };
   }
 
+  componentDidMount() {
+    console.log("komponenten ist fertig (comopnent DIDMount)");
+    axios
+      .get("https://jsonplaceholder.typicode.com/todos", {
+        params: { _limit: 15 },
+      })
+      .then((response) => {
+        console.log(response.data);
+        this.setState({
+          todos: response.data,
+        });
+      });
+    // Aufgabe
+    // füge die Todo von jsonplaceholder deinem state hinzu
+  }
+
+  componentDidUpdate() {
+    console.log("component did update");
+  }
   onChangeCheckbox = (id) => {
     const updatedTodosArr = this.state.todos.map((todo) => {
       if (todo.id === id) {
@@ -69,62 +58,34 @@ class TodoContainer extends React.Component {
     });
   };
 
-
-
-
-  addTodo = (e) => {
-    // console.log(e.target.value);
-    // console.log("hallo e");
-    this.setState({ title: e.target.value });
-    
-  };
-
-  submitTodo = (e) => {
-    // console.log(e);
-    // console.log("gaelus e");
-    e.preventDefault();
-    const currentTodo = {
-      id: `1 ${Date.now()}`,
-      title: this.state.title,
-      completed: false,
-    };
-    const todoState = this.state.todos;
-    todoState.push(currentTodo)
-    this.setState({
-      id: "",
-      title: "",
-      todos: todoState,
-    })
-  };
-
   addTodoItem = (title) => {
-    console.log('add:', title);
+    console.log("add:", title);
     // füge neuses toDo Item dem state hinzu
     // drei Werte: id, title, completed
     const newTodo = {
       id: uuidv4(),
       title: title,
       completed: false,
-    }
+    };
     // copy array from state updateTodosArr
     const updatedTodoArr = [...this.state.todos];
     // add new todo Item to updatedTodosArr
-    updatedTodoArr.unshift(newTodo)
+    updatedTodoArr.unshift(newTodo);
 
     // update state with updatedTodosArr
-     this.setState({
-       todos: updatedTodoArr
-     });
-    
-    console.log(updatedTodoArr);
+    this.setState({
+      todos: updatedTodoArr,
+    });
 
-  }
+    console.log(updatedTodoArr);
+  };
 
   render() {
+    console.log("Komponente render wird aufgerufen");
     return (
       <div className="container">
         <Header />
-        <InputTodo addTodoItem = {this.addTodoItem}/>
+        <InputTodo addTodoItem={this.addTodoItem} />
         <ul>
           {this.state.todos.map((todo) => (
             <TodoItem
@@ -138,11 +99,7 @@ class TodoContainer extends React.Component {
           ))}
         </ul>
 
-        <form action="#">
-          <label htmlFor="#">Add Todo</label>
-          <input type="text" value={this.state.title} onChange={this.addTodo} />
-          <button onClick={this.submitTodo}>Submit</button>
-        </form>
+       
       </div>
     );
   }
